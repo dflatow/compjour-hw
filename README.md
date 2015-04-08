@@ -1,4 +1,4 @@
 
 # Computational Journalism Repo
 
-![img](https://xkcd.com/1295/)
+![img](https://imgs.xkcd.com/comics/new_study.png)
