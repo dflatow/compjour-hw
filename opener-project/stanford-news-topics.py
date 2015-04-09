@@ -1,6 +1,6 @@
 from __future__ import print_function
 import requests
-from urlparse import urljoin
+from urllib.parse import urljoin
 import bs4
 
 # download the news home page at:
