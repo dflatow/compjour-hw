@@ -25,4 +25,4 @@ print('G.', ','.join(hashtag_texts))
 url_ojbs = data['entities']['urls']
 url_texts = [h['display_url'] for h in url_ojbs]
 
-print('G.', ','.join(url_texts))
+print('H.', ','.join(url_texts))
