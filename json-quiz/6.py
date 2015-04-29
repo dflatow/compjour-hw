@@ -1,5 +1,4 @@
 import tweepy
-import json
 import requests
 import json
 import os
