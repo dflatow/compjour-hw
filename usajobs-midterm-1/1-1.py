@@ -1,11 +1,6 @@
-import requests
+from midterm_utils import get_state_total_jobs
 
-BASE_USAJOBS_URL = "https://data.usajobs.gov/api/jobs"
+state_name = "New York"
+tot_jobs = get_state_total_jobs(state_name)
 
-state_name = 'New York'
-atts = {"CountrySubdivision": state_name, 'NumberOfJobs': 1}
-resp = requests.get(BASE_USAJOBS_URL, params = atts)
-
-data = resp.json()
-
-print("%s has %s job listings." % (state_name, data['TotalJobs']))
+print("%s has %s job listings." % (state_name, tot_jobs))
