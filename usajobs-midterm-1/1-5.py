@@ -4,6 +4,6 @@ states = ['California', 'Florida', 'New York', 'Maryland']
 jobs = []
 
 for state in states:
-	jobs += [[state, get_state_total_jobs(state)]] # maybe we want tuples inside of list?
+	jobs += [[state, get_state_total_jobs(state)]] 
 	
 print(jobs)
