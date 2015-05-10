@@ -9,7 +9,7 @@ def get_state_total_jobs(state_name):
 	resp = requests.get(BASE_USAJOBS_URL, params = atts)
 	return int(resp.json()['TotalJobs'])
 
-def get_country_toPOSTAL_CODES_URLtal_jobs(country_name):
+def get_country_total_jobs(country_name):
 	atts = {"Country": country_name, 'NumberOfJobs': 1}
 	resp = requests.get(BASE_USAJOBS_URL, params = atts)
 	return int(resp.json()['TotalJobs'])
