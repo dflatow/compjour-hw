@@ -6,4 +6,6 @@ jobs = get_state_jobs("California", number_of_jobs=250)['JobData']
 
 data = [[x['OrganizationName'], 1] for x in jobs]
 df = pd.DataFrame(data, columns=['name', 'count'])
-print(df.groupby('name').sum())
+s = df.name.value_counts()
+print("Counts as a pandas series:\n",s)
+print("\nCounts as a dict:\n", dict(s))
