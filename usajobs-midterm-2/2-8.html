@@ -1,0 +1,137 @@
+
+  <html>
+    <head>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+      <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    </head>
+
+    <body>
+      <script type="text/javascript">
+        google.load("visualization", "1", {packages:["geochart"]});
+        google.setOnLoadCallback(drawRegionsMap);
+        function drawRegionsMap() {
+          var data = [['Country', 'Jobs'], ['United Arab Emirates', 4], ['Afghanistan', 13], ['Angola', 4], ['Bahrain', 15], ['Barbados', 4], ['Botswana', 4], ['Belgium', 11], ['Bangladesh', 4], ['Burma', 4], ['Benin', 5], ['Brazil', 4], ['Canada', 1], ['Cambodia', 4], ['Chad', 4], ['Congo', 4], ['Congo (DRC)', 4], ['China', 10], ['Cameroon', 5], ['Cuba', 2], ['Denmark', 4], ['Dominican Republic', 4], ['Egypt', 10], ['El Salvador', 1], ['Ethiopia', 4], ['France', 4], ['Gambia', 4], ['Gabon', 4], ['Republic of Georgia', 5], ['Ghana', 4], ['Germany', 79], ['Guatemala', 4], ['Guinea', 5], ['Guyana', 4], ['Haiti', 5], ['Honduras', 1], ['Hungary', 1], ['Indonesia', 4], ['India', 5], ['Italy', 41], ["Cote D'Ivoire", 5], ['Iraq', 6], ['Japan', 59], ['Jordan', 8], ['Kenya', 4], ['Kyrgyzstan', 3], ['South Korea', 48], ['Kuwait', 5], ['Kazakhstan', 4], ['Laos', 4], ['Liberia', 5], ['Lesotho', 4], ['Madagascar', 4], ['Malawi', 4], ['Mali', 5], ['Morocco', 4], ['Mauritania', 4], ['Oman', 4], ['Mexico', 5], ['Mozambique', 4], ['Nigeria', 4], ['Netherlands', 5], ['Nepal', 4], ['South Sudan', 4], ['Peru', 4], ['Pakistan', 8], ['Panama', 4], ['Portugal', 14], ['Papua New Guinea', 4], ['Guinea-Bissau', 4], ['Qatar', 4], ['Philippines', 5], ['Rwanda', 4], ['Saudi Arabia', 9], ['South Africa', 4], ['Senegal', 5], ['Sierra Leone', 5], ['Singapore', 6], ['Spain', 13], ['Switzerland', 4], ['Thailand', 5], ['Tajikistan', 7], ['Togo', 5], ['Turkey', 15], ['Tanzania', 4], ['Uganda', 4], ['United Kingdom', 27], ['Ukraine', 5], ['Burkina Faso', 5], ['Uzbekistan', 4], ['Vietnam', 4], ['Namibia', 4], ['Samoa', 1], ['Swaziland', 4], ['Yemen', 4], ['Zambia', 5], ['Zimbabwe', 4]];
+          var datatable = google.visualization.arrayToDataTable(data);
+          var options = {'width': 800, 'height': 500, 'resolution': 'countries'};
+          var chart = new google.visualization.GeoChart(document.getElementById('mychart'));
+          chart.draw(datatable, options);
+        }
+      </script>
+
+      <div class="container">
+        <h1 style="text-align:center">Foreign Country Jobs</h1>
+        <div id="mychart"></div>
+
+        <h2 style="text-align:center">Data</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Jobs</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Afghanistan</td><td>13</td></tr>
+<tr><td>Angola</td><td>4</td></tr>
+<tr><td>Bahrain</td><td>15</td></tr>
+<tr><td>Bangladesh</td><td>4</td></tr>
+<tr><td>Barbados</td><td>4</td></tr>
+<tr><td>Belgium</td><td>11</td></tr>
+<tr><td>Benin</td><td>5</td></tr>
+<tr><td>Botswana</td><td>4</td></tr>
+<tr><td>Brazil</td><td>4</td></tr>
+<tr><td>Burkina Faso</td><td>5</td></tr>
+<tr><td>Burma</td><td>4</td></tr>
+<tr><td>Cambodia</td><td>4</td></tr>
+<tr><td>Cameroon</td><td>5</td></tr>
+<tr><td>Canada</td><td>1</td></tr>
+<tr><td>Chad</td><td>4</td></tr>
+<tr><td>China</td><td>10</td></tr>
+<tr><td>Congo</td><td>4</td></tr>
+<tr><td>Congo (DRC)</td><td>4</td></tr>
+<tr><td>Cote D'Ivoire</td><td>5</td></tr>
+<tr><td>Cuba</td><td>2</td></tr>
+<tr><td>Denmark</td><td>4</td></tr>
+<tr><td>Dominican Republic</td><td>4</td></tr>
+<tr><td>Egypt</td><td>10</td></tr>
+<tr><td>El Salvador</td><td>1</td></tr>
+<tr><td>Ethiopia</td><td>4</td></tr>
+<tr><td>France</td><td>4</td></tr>
+<tr><td>Gabon</td><td>4</td></tr>
+<tr><td>Gambia</td><td>4</td></tr>
+<tr><td>Germany</td><td>79</td></tr>
+<tr><td>Ghana</td><td>4</td></tr>
+<tr><td>Guatemala</td><td>4</td></tr>
+<tr><td>Guinea</td><td>5</td></tr>
+<tr><td>Guinea-Bissau</td><td>4</td></tr>
+<tr><td>Guyana</td><td>4</td></tr>
+<tr><td>Haiti</td><td>5</td></tr>
+<tr><td>Honduras</td><td>1</td></tr>
+<tr><td>Hungary</td><td>1</td></tr>
+<tr><td>India</td><td>5</td></tr>
+<tr><td>Indonesia</td><td>4</td></tr>
+<tr><td>Iraq</td><td>6</td></tr>
+<tr><td>Italy</td><td>41</td></tr>
+<tr><td>Japan</td><td>59</td></tr>
+<tr><td>Jordan</td><td>8</td></tr>
+<tr><td>Kazakhstan</td><td>4</td></tr>
+<tr><td>Kenya</td><td>4</td></tr>
+<tr><td>Kuwait</td><td>5</td></tr>
+<tr><td>Kyrgyzstan</td><td>3</td></tr>
+<tr><td>Laos</td><td>4</td></tr>
+<tr><td>Lesotho</td><td>4</td></tr>
+<tr><td>Liberia</td><td>5</td></tr>
+<tr><td>Madagascar</td><td>4</td></tr>
+<tr><td>Malawi</td><td>4</td></tr>
+<tr><td>Mali</td><td>5</td></tr>
+<tr><td>Mauritania</td><td>4</td></tr>
+<tr><td>Mexico</td><td>5</td></tr>
+<tr><td>Morocco</td><td>4</td></tr>
+<tr><td>Mozambique</td><td>4</td></tr>
+<tr><td>Namibia</td><td>4</td></tr>
+<tr><td>Nepal</td><td>4</td></tr>
+<tr><td>Netherlands</td><td>5</td></tr>
+<tr><td>Nigeria</td><td>4</td></tr>
+<tr><td>Oman</td><td>4</td></tr>
+<tr><td>Pakistan</td><td>8</td></tr>
+<tr><td>Panama</td><td>4</td></tr>
+<tr><td>Papua New Guinea</td><td>4</td></tr>
+<tr><td>Peru</td><td>4</td></tr>
+<tr><td>Philippines</td><td>5</td></tr>
+<tr><td>Portugal</td><td>14</td></tr>
+<tr><td>Qatar</td><td>4</td></tr>
+<tr><td>Republic of Georgia</td><td>5</td></tr>
+<tr><td>Rwanda</td><td>4</td></tr>
+<tr><td>Samoa</td><td>1</td></tr>
+<tr><td>Saudi Arabia</td><td>9</td></tr>
+<tr><td>Senegal</td><td>5</td></tr>
+<tr><td>Sierra Leone</td><td>5</td></tr>
+<tr><td>Singapore</td><td>6</td></tr>
+<tr><td>South Africa</td><td>4</td></tr>
+<tr><td>South Korea</td><td>48</td></tr>
+<tr><td>South Sudan</td><td>4</td></tr>
+<tr><td>Spain</td><td>13</td></tr>
+<tr><td>Swaziland</td><td>4</td></tr>
+<tr><td>Switzerland</td><td>4</td></tr>
+<tr><td>Tajikistan</td><td>7</td></tr>
+<tr><td>Tanzania</td><td>4</td></tr>
+<tr><td>Thailand</td><td>5</td></tr>
+<tr><td>Togo</td><td>5</td></tr>
+<tr><td>Turkey</td><td>15</td></tr>
+<tr><td>Uganda</td><td>4</td></tr>
+<tr><td>Ukraine</td><td>5</td></tr>
+<tr><td>United Arab Emirates</td><td>4</td></tr>
+<tr><td>United Kingdom</td><td>27</td></tr>
+<tr><td>Uzbekistan</td><td>4</td></tr>
+<tr><td>Vietnam</td><td>4</td></tr>
+<tr><td>Yemen</td><td>4</td></tr>
+<tr><td>Zambia</td><td>5</td></tr>
+<tr><td>Zimbabwe</td><td>4</td></tr>
+          </tbody>
+        </table>
+      </div> <!--end container -->
+
+    <body>
+      <div id="mychart"></div>
+    </body>
+  </html>
