@@ -8,5 +8,5 @@ sorted_data = sorted(data, key=itemgetter(1), reverse=True)
 
 for d in sorted_data:
 	if d[1] > 10:
-		print(d[0], d[1])
+		print("%s, %s" %(d[0],d[1]))
 

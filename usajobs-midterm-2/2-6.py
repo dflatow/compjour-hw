@@ -9,8 +9,8 @@ others = 0
 
 for d in sorted_data:
 	if d[1] > 10:
-		print(d[0], d[1])
+		print("%s, %s" %(d[0],d[1]))
 	else:
 		others += d[1]
 
-print("Others", others)
+print("Others,", others)

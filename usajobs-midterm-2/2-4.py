@@ -10,7 +10,7 @@ sorted_data = sorted(data, key=sort_by_name)
 
 for d in sorted_data:
 	if d[1] < 100:
-		print(d[0], d[1])
+		print("%s, %s" %(d[0], d[1]))
 
 
 
