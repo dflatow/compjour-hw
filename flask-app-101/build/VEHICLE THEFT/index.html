@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+    </head>
+    <body>
+        <div id="map" style="width:90%; height:500px;"></div>
+        <h1>Crime in San Francisco</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Category</th>
+                <th>Descript</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Resolution</th>
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/13/15 0:00</td>
+                <td>17:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN MOTORCYCLE</td>
+                <td>4/13/15 0:00</td>
+                <td>20:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/13/15 0:00</td>
+                <td>18:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/13/15 0:00</td>
+                <td>20:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN MOTORCYCLE</td>
+                <td>4/13/15 0:00</td>
+                <td>10:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>7:15</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN TRUCK</td>
+                <td>4/14/15 0:00</td>
+                <td>7:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>21:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN TRUCK</td>
+                <td>4/14/15 0:00</td>
+                <td>6:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>11:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>14:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>23:40</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN TRUCK</td>
+                <td>4/14/15 0:00</td>
+                <td>19:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN TRUCK</td>
+                <td>4/14/15 0:00</td>
+                <td>18:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>ATTEMPTED STOLEN VEHICLE</td>
+                <td>4/14/15 0:00</td>
+                <td>19:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>22:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/14/15 0:00</td>
+                <td>17:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/15/15 0:00</td>
+                <td>0:45</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/15/15 0:00</td>
+                <td>17:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN MOTORCYCLE</td>
+                <td>4/15/15 0:00</td>
+                <td>1:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN MOTORCYCLE</td>
+                <td>4/15/15 0:00</td>
+                <td>19:15</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/15/15 0:00</td>
+                <td>12:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/15/15 0:00</td>
+                <td>0:01</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/15/15 0:00</td>
+                <td>2:45</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/15/15 0:00</td>
+                <td>16:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VEHICLE THEFT/">VEHICLE THEFT</a></td>
+                <td>STOLEN AUTOMOBILE</td>
+                <td>4/16/15 0:00</td>
+                <td>4:07</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+        </table>
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.777241,  -122.423867], 13);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4719326, 37.74326972]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN MOTORCYCLE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4167332, 37.73667417]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4240702, 37.70954442]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4249212, 37.7276742]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN MOTORCYCLE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4118687, 37.80111931]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4524415, 37.7285021]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN TRUCK"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3967742, 37.76512964]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4076956, 37.77931698]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN TRUCK"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4428227, 37.7833997]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4662047, 37.77254054]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4488485, 37.78152563]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4357065, 37.71411213]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN TRUCK"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4085507, 37.77738856]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN TRUCK"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4224367, 37.72844467]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "ATTEMPTED STOLEN VEHICLE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4711933, 37.71563639]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4118905, 37.75181176]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.407236, 37.72600536]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4040716, 37.77727419]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4198279, 37.76667376]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN MOTORCYCLE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4150729, 37.79778844]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN MOTORCYCLE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4187487, 37.75543719]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4595262, 37.77075624]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3972582, 37.76504602]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.5071325, 37.76128642]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4720483, 37.78539022]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VEHICLE THEFT",
+                    "Descript": "STOLEN AUTOMOBILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4095299, 37.76571844]
+                  }
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.Category + '/">' +
+                            feature.properties.Category +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);            
+        </script>        
+    </body>
+</html>

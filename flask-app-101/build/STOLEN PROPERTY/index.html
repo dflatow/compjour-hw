@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+    </head>
+    <body>
+        <div id="map" style="width:90%; height:500px;"></div>
+        <h1>Crime in San Francisco</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Category</th>
+                <th>Descript</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Resolution</th>
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/13/15 0:00</td>
+                <td>22:28</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/13/15 0:00</td>
+                <td>10:58</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/13/15 0:00</td>
+                <td>16:30</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/13/15 0:00</td>
+                <td>2:47</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/15/15 0:00</td>
+                <td>7:25</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/15/15 0:00</td>
+                <td>12:16</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/15/15 0:00</td>
+                <td>2:06</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/15/15 0:00</td>
+                <td>14:15</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/16/15 0:00</td>
+                <td>4:07</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="STOLEN PROPERTY/">STOLEN PROPERTY</a></td>
+                <td>STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING</td>
+                <td>4/18/15 0:00</td>
+                <td>10:23</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+        </table>
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.777241,  -122.423867], 13);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4279912, 37.78495312]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4624894, 37.76695917]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.5104961, 37.77973249]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4039157, 37.79053899]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4151278, 37.77978707]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4586388, 37.76719994]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.405284, 37.79655105]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4359407, 37.72379045]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4095299, 37.76571844]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "STOLEN PROPERTY",
+                    "Descript": "STOLEN PROPERTY, POSSESSION WITH KNOWLEDGE, RECEIVING"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4108089, 37.77692991]
+                  }
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.Category + '/">' +
+                            feature.properties.Category +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);            
+        </script>        
+    </body>
+</html>

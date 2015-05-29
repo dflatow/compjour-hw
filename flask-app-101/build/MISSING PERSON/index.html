@@ -1,0 +1,646 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+    </head>
+    <body>
+        <div id="map" style="width:90%; height:500px;"></div>
+        <h1>Crime in San Francisco</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Category</th>
+                <th>Descript</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Resolution</th>
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/13/15 0:00</td>
+                <td>14:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/13/15 0:00</td>
+                <td>17:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/14/15 0:00</td>
+                <td>17:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/14/15 0:00</td>
+                <td>14:05</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/14/15 0:00</td>
+                <td>16:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/14/15 0:00</td>
+                <td>16:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/14/15 0:00</td>
+                <td>23:20</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/14/15 0:00</td>
+                <td>13:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/14/15 0:00</td>
+                <td>13:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/14/15 0:00</td>
+                <td>22:20</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/14/15 0:00</td>
+                <td>12:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/14/15 0:00</td>
+                <td>12:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/14/15 0:00</td>
+                <td>8:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/14/15 0:00</td>
+                <td>23:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/15/15 0:00</td>
+                <td>12:25</td>
+                <td>CLEARED-CONTACT JUVENILE FOR MORE INFO</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/15/15 0:00</td>
+                <td>13:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/15/15 0:00</td>
+                <td>10:30</td>
+                <td>UNFOUNDED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/15/15 0:00</td>
+                <td>10:30</td>
+                <td>UNFOUNDED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/15/15 0:00</td>
+                <td>20:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/15/15 0:00</td>
+                <td>18:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/15/15 0:00</td>
+                <td>0:01</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/15/15 0:00</td>
+                <td>19:30</td>
+                <td>UNFOUNDED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/16/15 0:00</td>
+                <td>11:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/16/15 0:00</td>
+                <td>16:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/16/15 0:00</td>
+                <td>8:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING JUVENILE</td>
+                <td>4/16/15 0:00</td>
+                <td>12:24</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/16/15 0:00</td>
+                <td>12:24</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>MISSING ADULT</td>
+                <td>4/16/15 0:00</td>
+                <td>14:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/18/15 0:00</td>
+                <td>11:35</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="MISSING PERSON/">MISSING PERSON</a></td>
+                <td>FOUND PERSON</td>
+                <td>4/18/15 0:00</td>
+                <td>10:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+        </table>
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.777241,  -122.423867], 13);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4174994, 37.75308467]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4149847, 37.7961215]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4242606, 37.76640644]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4065391, 37.75648641]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4206914, 37.78148325]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4206914, 37.78148325]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4129305, 37.78383444]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4225406, 37.78690887]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4225406, 37.78690887]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4018493, 37.76676511]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4432416, 37.76999411]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4432416, 37.76999411]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4890607, 37.75736882]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4327132, 37.72472364]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4113028, 37.78553558]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4534813, 37.77305287]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4149005, 37.78274196]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4149005, 37.78274196]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4079992, 37.77782417]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4244506, 37.76718359]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4150669, 37.78356348]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3987908, 37.79080944]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4190527, 37.75863241]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4184482, 37.75223917]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.492095, 37.77687034]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING JUVENILE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4046774, 37.79711579]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4046774, 37.79711579]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "MISSING ADULT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4113028, 37.78553558]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4065391, 37.75648641]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "MISSING PERSON",
+                    "Descript": "FOUND PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4076335, 37.78418935]
+                  }
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.Category + '/">' +
+                            feature.properties.Category +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);            
+        </script>        
+    </body>
+</html>

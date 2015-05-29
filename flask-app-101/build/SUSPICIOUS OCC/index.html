@@ -1,0 +1,806 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+    </head>
+    <body>
+        <div id="map" style="width:90%; height:500px;"></div>
+        <h1>Crime in San Francisco</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Category</th>
+                <th>Descript</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Resolution</th>
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/13/15 0:00</td>
+                <td>11:51</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/13/15 0:00</td>
+                <td>14:17</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/13/15 0:00</td>
+                <td>21:44</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/13/15 0:00</td>
+                <td>0:01</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/13/15 0:00</td>
+                <td>14:11</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>21:05</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>7:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>UNUSUAL OCCURENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>11:15</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>18:50</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>16:13</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>20:12</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/14/15 0:00</td>
+                <td>23:26</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/14/15 0:00</td>
+                <td>0:05</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/14/15 0:00</td>
+                <td>12:37</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/14/15 0:00</td>
+                <td>18:50</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/14/15 0:00</td>
+                <td>23:40</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/15/15 0:00</td>
+                <td>7:40</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/15/15 0:00</td>
+                <td>17:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/15/15 0:00</td>
+                <td>2:35</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/15/15 0:00</td>
+                <td>6:15</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/15/15 0:00</td>
+                <td>21:52</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/15/15 0:00</td>
+                <td>21:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/15/15 0:00</td>
+                <td>0:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/15/15 0:00</td>
+                <td>12:59</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/15/15 0:00</td>
+                <td>22:19</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/15/15 0:00</td>
+                <td>1:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS PERSON</td>
+                <td>4/16/15 0:00</td>
+                <td>10:40</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/16/15 0:00</td>
+                <td>17:27</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/16/15 0:00</td>
+                <td>9:20</td>
+                <td>UNFOUNDED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/16/15 0:00</td>
+                <td>4:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/16/15 0:00</td>
+                <td>3:34</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/16/15 0:00</td>
+                <td>21:47</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/16/15 0:00</td>
+                <td>9:20</td>
+                <td>UNFOUNDED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/17/15 0:00</td>
+                <td>12:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/17/15 0:00</td>
+                <td>17:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/17/15 0:00</td>
+                <td>21:17</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>INVESTIGATIVE DETENTION</td>
+                <td>4/17/15 0:00</td>
+                <td>0:34</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="SUSPICIOUS OCC/">SUSPICIOUS OCC</a></td>
+                <td>SUSPICIOUS OCCURRENCE</td>
+                <td>4/18/15 0:00</td>
+                <td>19:56</td>
+                <td>NONE</td>          
+            </tr>
+            
+        </table>
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.777241,  -122.423867], 13);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4300565, 37.74584886]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4365076, 37.77706723]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4107688, 37.78321452]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4034048, 37.77542071]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4242765, 37.727293]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.401966, 37.76870486]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3994823, 37.72233932]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "UNUSUAL OCCURENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4063457, 37.75234837]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4034048, 37.77542071]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4549928, 37.74080331]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3931106, 37.77731032]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4324327, 37.75755061]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4097917, 37.79850835]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4198122, 37.78660195]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4034048, 37.77542071]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4357065, 37.71411213]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4946894, 37.75343466]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4270837, 37.79719996]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4129305, 37.78383444]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4476576, 37.78720782]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4217477, 37.76274366]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4126984, 37.80531094]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4378041, 37.71494034]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4467835, 37.7617816]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4182019, 37.7863251]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4759648, 37.74956763]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS PERSON"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4034048, 37.77542071]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4133611, 37.77636281]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4298017, 37.73038195]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4090932, 37.78538982]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4096964, 37.78175406]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3981435, 37.78694618]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4298017, 37.73038195]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4203035, 37.77089689]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4329555, 37.76339583]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4144332, 37.78465763]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "INVESTIGATIVE DETENTION"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4751496, 37.74960378]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "SUSPICIOUS OCC",
+                    "Descript": "SUSPICIOUS OCCURRENCE"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3961706, 37.79548699]
+                  }
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.Category + '/">' +
+                            feature.properties.Category +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);            
+        </script>        
+    </body>
+</html>

@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.css" />
+        <script type="text/javascript" src="http://cdn.leafletjs.com/leaflet-0.7.2/leaflet.js?2"></script>
+    </head>
+    <body>
+        <div id="map" style="width:90%; height:500px;"></div>
+        <h1>Crime in San Francisco</h1>
+        <table border=1 cellpadding=7>
+            <tr>
+                <th>Category</th>
+                <th>Descript</th>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Resolution</th>
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/13/15 0:00</td>
+                <td>21:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/13/15 0:00</td>
+                <td>19:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/13/15 0:00</td>
+                <td>21:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/13/15 0:00</td>
+                <td>0:01</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>22:15</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>4:15</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/14/15 0:00</td>
+                <td>10:55</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>9:40</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/14/15 0:00</td>
+                <td>15:20</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/14/15 0:00</td>
+                <td>15:20</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>14:27</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/14/15 0:00</td>
+                <td>19:50</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/14/15 0:00</td>
+                <td>17:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>22:55</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/14/15 0:00</td>
+                <td>4:59</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>21:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/14/15 0:00</td>
+                <td>23:10</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, ADULT SUSPECT</td>
+                <td>4/14/15 0:00</td>
+                <td>15:15</td>
+                <td>EXCEPTIONAL CLEARANCE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, GRAFFITI</td>
+                <td>4/15/15 0:00</td>
+                <td>19:46</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/15/15 0:00</td>
+                <td>10:10</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/15/15 0:00</td>
+                <td>2:40</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/15/15 0:00</td>
+                <td>9:56</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/15/15 0:00</td>
+                <td>10:15</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/15/15 0:00</td>
+                <td>5:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/15/15 0:00</td>
+                <td>15:45</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/15/15 0:00</td>
+                <td>8:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, JUVENILE SUSPECT</td>
+                <td>4/15/15 0:00</td>
+                <td>20:09</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/16/15 0:00</td>
+                <td>21:19</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/16/15 0:00</td>
+                <td>0:01</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/16/15 0:00</td>
+                <td>4:00</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/16/15 0:00</td>
+                <td>6:50</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/16/15 0:00</td>
+                <td>9:40</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/16/15 0:00</td>
+                <td>17:20</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/16/15 0:00</td>
+                <td>10:32</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/16/15 0:00</td>
+                <td>4:57</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/17/15 0:00</td>
+                <td>0:06</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM OF VEHICLES</td>
+                <td>4/17/15 0:00</td>
+                <td>19:30</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/17/15 0:00</td>
+                <td>4:01</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/18/15 0:00</td>
+                <td>2:40</td>
+                <td>ARREST, BOOKED</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, VANDALISM</td>
+                <td>4/18/15 0:00</td>
+                <td>22:50</td>
+                <td>NONE</td>          
+            </tr>
+            
+            <tr>
+                <td><a href="VANDALISM/">VANDALISM</a></td>
+                <td>MALICIOUS MISCHIEF, BREAKING WINDOWS</td>
+                <td>4/19/15 0:00</td>
+                <td>3:18</td>
+                <td>NONE</td>          
+            </tr>
+            
+        </table>
+        <script type="text/javascript">
+            var map = L.map('map').setView([37.777241,  -122.423867], 13);
+            var mapquestLayer = new L.TileLayer('http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: 'Data, imagery and map information provided by <a href="http://open.mapquest.co.uk" target="_blank">MapQuest</a>,<a href="http://www.openstreetmap.org/" target="_blank">OpenStreetMap</a> and contributors.',
+                subdomains: ['otile1','otile2','otile3','otile4']
+            });
+            map.addLayer(mapquestLayer);
+            var data = {
+              "type": "FeatureCollection",
+              "features": [
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3936969, 37.73562727]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.400216, 37.79480303]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.5047207, 37.75952427]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4256791, 37.75580604]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4221994, 37.80643511]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4138201, 37.7857383]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.419213, 37.76513397]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4034048, 37.77542071]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.413791, 37.78383656]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4588576, 37.78220007]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4070391, 37.78075652]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3827051, 37.73588581]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4517571, 37.71573288]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.437597, 37.78654859]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.423094, 37.77710772]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4257306, 37.77791092]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4877301, 37.75368943]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, ADULT SUSPECT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.451258, 37.77046831]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, GRAFFITI"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4200854, 37.75213833]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4217325, 37.77075909]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3924914, 37.72724762]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4180507, 37.78998966]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4066906, 37.78520719]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4576833, 37.72189658]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4221635, 37.78868564]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.5047207, 37.75952427]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, JUVENILE SUSPECT"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3967704, 37.75994122]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4085345, 37.77129067]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.5029746, 37.7643095]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4194803, 37.78426976]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4953625, 37.76401686]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4148786, 37.7826335]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4196583, 37.76422056]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4155357, 37.78978741]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4245143, 37.78858479]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3878337, 37.71310723]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM OF VEHICLES"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.3730685, 37.72750171]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4485117, 37.77357258]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4316734, 37.77392044]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, VANDALISM"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4089132, 37.78121165]
+                  }
+                },
+                
+                {
+                  "type": "Feature",
+                  "properties": {
+                    "Category": "VANDALISM",
+                    "Descript": "MALICIOUS MISCHIEF, BREAKING WINDOWS"
+                  },
+                  "geometry": {
+                    "type": "Point",
+                    "coordinates": [-122.4147821, 37.78605144]
+                  }
+                }
+                
+              ]
+            };
+            var dataLayer = L.geoJson(data, {
+                onEachFeature: function(feature, layer) {
+                    layer.bindPopup(
+                        '<a href="' + feature.properties.Category + '/">' +
+                            feature.properties.Category +
+                        '</a>'
+                    );
+                }
+            });
+            map.addLayer(dataLayer);            
+        </script>        
+    </body>
+</html>
