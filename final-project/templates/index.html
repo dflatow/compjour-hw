@@ -1,0 +1,440 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+    <!--Load the AJAX API-->
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+
+      // Load the Visualization API and the controls package.
+      google.load('visualization', '1.0', {'packages':['controls', 'calendar']});
+
+      // Set a callback to run when the Google Visualization API is loaded.
+      google.setOnLoadCallback(drawDashboard);
+
+      // Callback that creates and populates a data table,
+      // instantiates a dashboard, a range slider and a pie chart,
+      // passes in the data and draws it.
+      function drawDashboard() {
+
+        // Create our data table.
+        // var data = google.visualization.arrayToDataTable([
+        //   ['Name', 'Donuts eaten', "Date", "EndDate"],
+        //   ['Michael' , 2, new Date(2013, 9, 4), new Date(2013, 9, 10)],
+        //   ['Elisa', 7, new Date(2013, 9, 5), new Date(2013, 9, 10)],
+        //   ['Robert', 3, new Date(2013, 9, 6), new Date(2013, 9, 10)],
+        //   ['John', 2, new Date(2013, 9, 7), new Date(2013, 9, 10)],
+        //   ['Jessica', 6, new Date(2013, 9, 8), new Date(2013, 9, 10)],
+        //   ['Aaron', 1, new Date(2013, 9, 9), new Date(2013, 9, 10)],
+        //   ['<a href="www.google.com">Item 1</a>', 8, new Date(2013, 9, 10), new Date(2013, 9, 10)]
+        // ]);
+
+        var data = google.visualization.arrayToDataTable([
+['to','from','subject','pdfLink','docDate','vol'],
+['H','','H: LATEST: HOW SYRIA IS AIDING QADDAFI AND MORE......', "<a href='/C05739546/'>Link</a>" ,new Date(2011,2,03),1],
+['Abedin, Huma','H','H: LATEST: HOW SYRIA IS AIDING QADDAFI AND MORE......', "<a href='/C05739561/'>Link</a>" ,new Date(2011,2,11),2],
+['Abedin, Huma','H','H: LATEST: HOW SYRIA IS AIDING QADDAFI AND MORE......', "<a href='/C05739554/'>Link</a>" ,new Date(2011,2,11),2],
+['H','Sullivan, Jacob J','ABZ AN HBJ ON LIBYA AND WEST BANK/GAZA', "<a href='/C05739564/'>Link</a>" ,new Date(2011,2,13),2],
+['H','Slaughter, Anne-Marie','PIECE ON LIBYA NFZ THAT WILL APPEAR ON NYT OP-ED P...', "<a href='/C05739568/'>Link</a>" ,new Date(2011,2,13),2],
+['H','Sullivan, Jacob J','PROPOSED QUAD DEAL', "<a href='/C05739586/'>Link</a>" ,new Date(2011,2,23),1],
+['H','','H: LOTS OF NEW INTEL; POSSIBLE LIBYAN COLLAPSE. SI...', "<a href='/C05739594/'>Link</a>" ,new Date(2011,2,27),2],
+['H','Abedin, Huma','CHRIS STEVENS MISSION', "<a href='/C05739591/'>Link</a>" ,new Date(2011,2,27),2],
+['H','Sullivan, Jacob J','LIBYAN', "<a href='/C05739614/'>Link</a>" ,new Date(2011,2,29),3],
+['sullivanjj@state.gov','H','LIBYAN', "<a href='/C05739611/'>Link</a>" ,new Date(2011,2,29),3],
+['H','Sullivan, Jacob J','LIBYAN', "<a href='/C05739608/'>Link</a>" ,new Date(2011,2,29),3],
+['H','Sullivan, Jacob J','STATEMENT BY THE PRESS SECRETARY', "<a href='/C05739630/'>Link</a>" ,new Date(2011,2,30),3],
+['sullivanjj@state.gov','H','LIBYAN', "<a href='/C05739617/'>Link</a>" ,new Date(2011,2,30),3],
+['H','Slaughter, Anne-Marie','GORGEOUS PIC ON THE FRONT PAGE OF THE NYT!', "<a href='/C05739622/'>Link</a>" ,new Date(2011,2,30),3],
+['H','Slaughter, Anne-Marie','GORGEOUS PIC ON THE FRONT PAGE OF THE NYT!', "<a href='/C05739632/'>Link</a>" ,new Date(2011,3,01),1],
+['H','Sullivan, Jacob J','BRITS AND LIBYA', "<a href='/C05739639/'>Link</a>" ,new Date(2011,3,02),3],
+['sullivanjj@state.gov','H','BRITS AND LIBYA', "<a href='/C05739638/'>Link</a>" ,new Date(2011,3,02),3],
+['H','Sullivan, Jacob J','MISSION TO BENGHAZI', "<a href='/C05739641/'>Link</a>" ,new Date(2011,3,02),3],
+['H','Mills, Cheryl D','EXCLUSIVE: BILL CLINTON SAYS HE WOULDN`T RULE OUT ...', "<a href='/C05739646/'>Link</a>" ,new Date(2011,3,03),1],
+['sullivanjj@state.gov','H','H: UK GAME PLAYING; NEW REBEL STRATEGISTS; EGYPT M...', "<a href='/C05739660/'>Link</a>" ,new Date(2011,3,08),3],
+['H','','H: UK GAME PLAYING; NEW REBEL STRATEGISTS; EGYPT M...', "<a href='/C05739654/'>Link</a>" ,new Date(2011,3,08),3],
+['H','Sullivan, Jacob J','BENGHAZI AND NATO', "<a href='/C05739649/'>Link</a>" ,new Date(2011,3,08),3],
+['H','Abedin, Huma','STEVENS UPDATE (IMPORTANT', "<a href='/C05739666/'>Link</a>" ,new Date(2011,3,10),1],
+['H','Abedin, Huma','UPDATE ON SITUATION IN BENGHAZI: MCCAIN VISIT', "<a href='/C05739669/'>Link</a>" ,new Date(2011,3,22),2],
+['H','Abedin, Huma','BENGHAZI STAFFING', "<a href='/C05739670/'>Link</a>" ,new Date(2011,3,22),2],
+['abedinh@state.gov','H','MCCAIN UPDATE', "<a href='/C05739678/'>Link</a>" ,new Date(2011,3,23),2],
+['H','Abedin, Huma','MCCAIN UPDATE', "<a href='/C05739676/'>Link</a>" ,new Date(2011,3,23),2],
+['H','Abedin, Huma','STEVENS UPDATE', "<a href='/C05739681/'>Link</a>" ,new Date(2011,3,24),1],
+['H','Mills, Cheryl D','SPECIAL ENVOY STEVENS REPORT FROM BENGHAZI 4/26 12...', "<a href='/C05739687/'>Link</a>" ,new Date(2011,3,26),2],
+['H','Mills, Cheryl D','STEVENS UPDATE ON BENGHAZI - - 4/26 @ 7AM', "<a href='/C05739684/'>Link</a>" ,new Date(2011,3,26),2],
+['JilotyLC@state.gov','H','H: UBL, AQ & LIBYA. SID', "<a href='/C05739696/'>Link</a>" ,new Date(2011,4,02),2],
+['H','','H: UBL, AQ & LIBYA. SID', "<a href='/C05739691/'>Link</a>" ,new Date(2011,4,02),2],
+['H','Sullivan, Jacob J','H: UBL, AQ & LIBYA. SID', "<a href='/C05739702/'>Link</a>" ,new Date(2011,4,06),2],
+['sullivanjj@state.gov','H','H: UBL, AQ & LIBYA. SID', "<a href='/C05739699/'>Link</a>" ,new Date(2011,4,06),2],
+['sullivanjj@state.gov','H','H: MEMO ATTACHED ON Q`S SECRET BID TO UK. SID', "<a href='/C05739715/'>Link</a>" ,new Date(2011,5,03),4],
+['H','','H: NEW MEMO: Q`S SECRET BID TO UK. SID', "<a href='/C05739705/'>Link</a>" ,new Date(2011,5,03),4],
+['H','Sullivan, Jacob J','H: NEW MEMO: Q`S SECRET BID TO UK. SID', "<a href='/C05739721/'>Link</a>" ,new Date(2011,5,03),4],
+['H','','H: MEMO ATTACHED ON Q SECRET BID TO UK. SID', "<a href='/C05739709/'>Link</a>" ,new Date(2011,5,03),4],
+['H','Sullivan, Jacob J','HOTEL IN BENGHAZI', "<a href='/C05739724/'>Link</a>" ,new Date(2011,5,10),1],
+['H','','H: WHO KILLED YOUNIS AND WHY. SID', "<a href='/C05739727/'>Link</a>" ,new Date(2011,7,08),1],
+['H','Abedin, Huma','JEFF UPDATE', "<a href='/C05739732/'>Link</a>" ,new Date(2011,7,21),1],
+['H','Mills, Cheryl D','TICK TOCK ON LIBYA', "<a href='/C05739752/'>Link</a>" ,new Date(2011,7,22),5],
+['H','Mills, Cheryl D','BENGHAZI UPDATE (1200 LOCAL', "<a href='/C05739742/'>Link</a>" ,new Date(2011,7,22),5],
+['H','Abedin, Huma','BENGHAZI UPDATE (1200 LOCAL', "<a href='/C05739736/'>Link</a>" ,new Date(2011,7,22),5],
+['abedinh@state.gov','H','BENGHAZI UPDATE (1200 LOCAL', "<a href='/C05739745/'>Link</a>" ,new Date(2011,7,22),5],
+['H','Sullivan, Jacob J','BENGHAZI UPDATE (1200 LOCAL', "<a href='/C05739748/'>Link</a>" ,new Date(2011,7,22),5],
+['Flores, Oscar','H','TICK TOCK ON LIBYA', "<a href='/C05739755/'>Link</a>" ,new Date(2011,8,03),1],
+['H','Sullivan, Jacob J','ROGERS', "<a href='/C05739759/'>Link</a>" ,new Date(2011,8,10),1],
+['H','Sullivan, Jacob J','QUICK READOUT FROM JEFF FELTMAN IN TRIPOL', "<a href='/C05739783/'>Link</a>" ,new Date(2011,8,14),1],
+['H','Mills, Cheryl D','SECRETARY IN TRIPOLI', "<a href='/C05739784/'>Link</a>" ,new Date(2011,9,21),1],
+['H','','H: LATEST INTEL LIBYAN CONFLICTS, LEADERS & MILITI...', "<a href='/C05739800/'>Link</a>" ,new Date(2012,0,05),5],
+['sullivanjj@state.gov','H','H: LATEST INTEL LIBYAN CONFLICTS, LEADERS & MILITI...', "<a href='/C05739794/'>Link</a>" ,new Date(2012,0,05),5],
+['H','','H: LATEST INTEL LIBYAN CONFLICTS, LEADERS & MILITI...', "<a href='/C05739789/'>Link</a>" ,new Date(2012,0,05),5],
+['','H','H: LATEST INTEL LIBYAN CONFLICTS, LEADERS & MILITI...', "<a href='/C05739796/'>Link</a>" ,new Date(2012,0,05),5],
+['H','Sullivan, Jacob J','H: LATEST INTEL LIBYAN CONFLICTS, LEADERS & MILITI...', "<a href='/C05739803/'>Link</a>" ,new Date(2012,0,05),5],
+['H','Sullivan, Jacob J','HRC FRIEND', "<a href='/C05739809/'>Link</a>" ,new Date(2012,0,06),1],
+['H','Sullivan, Jacob J','HRC FRIEND', "<a href='/C05739810/'>Link</a>" ,new Date(2012,0,09),1],
+['Russorv@state.gov','H','HRC FRIEND', "<a href='/C05739813/'>Link</a>" ,new Date(2012,0,12),1],
+['H','Mills, Cheryl D','AGREMENT/LIBYA', "<a href='/C05739820/'>Link</a>" ,new Date(2012,0,18),1],
+['sullivanjj@state.gov','H','H: V GOOD INTEL INTERNAL LIBYA. SID', "<a href='/C05739824/'>Link</a>" ,new Date(2012,0,23),2],
+['H','Sullivan, Jacob J','H: V GOOD INTEL INTERNAL LIBYA. SID', "<a href='/C05739857/'>Link</a>" ,new Date(2012,0,23),2],
+['H','Sullivan, Jacob J','LIBYA INFO', "<a href='/C05739859/'>Link</a>" ,new Date(2012,0,24),1],
+['Russorv@state.gov','H','H: V GOOD INTEL INTERNAL LIBYA. SID', "<a href='/C05739861/'>Link</a>" ,new Date(2012,0,27),1],
+['Sullivan, Jacob J','H','H: LIBYA, INTEL, INTERNAL CONFLICT OVER MILITIAS. ...', "<a href='/C05739864/'>Link</a>" ,new Date(2012,1,21),1],
+['H','Sullivan, Jacob J','H: LIBYA, INTEL, INTERNAL CONFLICT OVER MILITIAS. ...', "<a href='/C05739866/'>Link</a>" ,new Date(2012,1,22),1],
+['H','Sullivan, Jacob J','FROM HRC FRIEND', "<a href='/C05739868/'>Link</a>" ,new Date(2012,1,24),1],
+['Russorv@state.gov','H','FROM HRC FRIEND', "<a href='/C05739869/'>Link</a>" ,new Date(2012,1,28),1],
+['sullivanjj@state.gov','H','H: FRANCE & UK BEHIND LIBYA BREAKUP. SID', "<a href='/C05739870/'>Link</a>" ,new Date(2012,2,09),2],
+['H','Sullivan, Jacob J','H: FRANCE & UK BEHIND LIBYA BREAKUP. SID', "<a href='/C05739872/'>Link</a>" ,new Date(2012,2,09),2],
+['H','Sullivan, Jacob J','LATEST FROM HRC`S CONTACT', "<a href='/C05739875/'>Link</a>" ,new Date(2012,3,03),2],
+['H','Sullivan, Jacob J','LATEST FROM HRC`S CONTACT', "<a href='/C05739874/'>Link</a>" ,new Date(2012,3,03),2],
+['H','Sullivan, Jake','LIBYA', "<a href='/C05739876/'>Link</a>" ,new Date(2012,3,04),1],
+['H','Sullivan, Jacob J','LATEST FROM HRC`S CONTACT', "<a href='/C05739877/'>Link</a>" ,new Date(2012,3,05),1],
+['H','Sullivan, Jacob J','LATEST FROM HRC`S FRIEND', "<a href='/C05739878/'>Link</a>" ,new Date(2012,3,23),1],
+['H','Sullivan, Jacob J','TALK WITH PM', "<a href='/C05739879/'>Link</a>" ,new Date(2012,3,27),1],
+['sullivanjj@state.gov','H','H: LIBYAN ELECTIONS INTEL. SID', "<a href='/C05739880/'>Link</a>" ,new Date(2012,6,04),1],
+['H','Sullivan, Jacob J','FYI', "<a href='/C05739883/'>Link</a>" ,new Date(2012,6,07),3],
+['H','Sullivan, Jacob J','LIBYA INTEL FROM S', "<a href='/C05739884/'>Link</a>" ,new Date(2012,6,07),3],
+['sullivanjj@state.gov','H','FYI', "<a href='/C05739882/'>Link</a>" ,new Date(2012,6,07),3],
+['Russorv@state.gov','H','H: LIBYAN ELECTIONS INTEL. SID', "<a href='/C05739885/'>Link</a>" ,new Date(2012,6,17),1],
+['H','Blumenthal, Sidney','H: INTEL ON NEW LIBYAN PRESIDENT. SID', "<a href='/C05739887/'>Link</a>" ,new Date(2012,7,23),1],
+['H','Sullivan, Jacob J','H: INTEL ON NEW LIBYA PRESIDENT. SID', "<a href='/C05739889/'>Link</a>" ,new Date(2012,7,24),2],
+['sullivanjj@state.gov','H','H: INTEL ON NEW LIBYA PRESIDENT. SID', "<a href='/C05739888/'>Link</a>" ,new Date(2012,7,24),2],
+['H','Blumenthal, Sidney','H: INTEL, LIBYAN PRESIDENT. SID', "<a href='/C05739890/'>Link</a>" ,new Date(2012,7,27),1],
+['sullivanjj@state.gov','H','H: INTEL, LIBYAN PRESIDENT. SID', "<a href='/C05739892/'>Link</a>" ,new Date(2012,7,28),2],
+['Flores, Oscar','H','H: INTEL, LIBYAN PRESIDENT. SID', "<a href='/C05739891/'>Link</a>" ,new Date(2012,7,28),2],
+['millscd@state.gov','H','CHRIS SMITH', "<a href='/C05739899/'>Link</a>" ,new Date(2012,8,11),6],
+['','H','REQUEST', "<a href='/C05739894/'>Link</a>" ,new Date(2012,8,11),6],
+['H','Nuland, Victoria J','CHRIS SMITH', "<a href='/C05739900/'>Link</a>" ,new Date(2012,8,11),6],
+['H','Mills, Cheryl D','CHRIS SMITH', "<a href='/C05739898/'>Link</a>" ,new Date(2012,8,11),6],
+['H','Hanley, Monica R','TOM DONILON', "<a href='/C05739895/'>Link</a>" ,new Date(2012,8,11),6],
+['sullivanjj@state.gov','H','CHRIS SMITH', "<a href='/C05739897/'>Link</a>" ,new Date(2012,8,11),6],
+[';H','Mills, Cheryl D','CHRIS STEVENS', "<a href='/C05739547/'>Link</a>" ,new Date(2012,8,12),27],
+['sullivanjj@state.gov','H','H: MAGARIAF ON ATTACK ON US IN LIBYA. SID', "<a href='/C05739583/'>Link</a>" ,new Date(2012,8,12),27],
+['H','','MORE ON LIBYA', "<a href='/C05739563/'>Link</a>" ,new Date(2012,8,12),27],
+['Russorv@state.gov','H','H: MAGARIAF ON ATTACK ON US IN LIBYA. SID', "<a href='/C05739580/'>Link</a>" ,new Date(2012,8,12),27],
+['H','','MORE ON LIBYA', "<a href='/C05739565/'>Link</a>" ,new Date(2012,8,12),27],
+['Russorv@state.gov','H','MORE ON LIBYA', "<a href='/C05739579/'>Link</a>" ,new Date(2012,8,12),27],
+['sullivanjj@state.gov','H','MORE ON LIBYA', "<a href='/C05739578/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Sullivan, Jacob J','HEY', "<a href='/C05739567/'>Link</a>" ,new Date(2012,8,12),27],
+['Russorv@state.gov','H','MEET THE RIGHT-WING EXTREMIST BEHIND ANTI-MUSLIM F...', "<a href='/C05739559/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Sullivan, Jacob J','SECRETARY`S REMARKS', "<a href='/C05739562/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Mills, Cheryl D','NOT A DRY EYE IN NEA', "<a href='/C05739569/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Sherman, Wendy R','ONE MORE PHOTO', "<a href='/C05739575/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Mills, Cheryl D','ANTI-MUSLIM FILM DIRECTOR IN HIDING, FOLLOWING LIB...', "<a href='/C05739560/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Mills, Cheryl D','CAIRO CONDEMNATION - FINAL', "<a href='/C05739550/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Koh, Harold Hongju','THANK YOU', "<a href='/C05739571/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Sullivan, Jacob J','WOW', "<a href='/C05739545/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Sherman, Wendy R','THE YOUTH OF LIBYA', "<a href='/C05739573/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Sullivan, Jacob J','S TODAY', "<a href='/C05739576/'>Link</a>" ,new Date(2012,8,12),27],
+['Sherman, Wendy R','Sullivan, Jacob J','THE YOUTH OF LIBYA', "<a href='/C05739577/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Blumenthal, Sidney','H: MAGARIAF ON ATTACK ON US IN LIBYA. SID', "<a href='/C05739902/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Mills, Cheryl D','UPDATE: BENGHAZI', "<a href='/C05739901/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Otero, Maria','I AM SO SORRY', "<a href='/C05739905/'>Link</a>" ,new Date(2012,8,12),27],
+['H','McHale, Judith','LIBYA', "<a href='/C05739910/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Coleman, Claire L','GEN DEMPSEY CALLED.', "<a href='/C05739907/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Mills, Cheryl D','WE RECOVERED BOTH BODIES OVERNITE AND ARE LOOKING ...', "<a href='/C05739903/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Slaughter, Anne-Marie','CHRIS STEVENS', "<a href='/C05739909/'>Link</a>" ,new Date(2012,8,12),27],
+['H','PIR','STATEMENT', "<a href='/C05739906/'>Link</a>" ,new Date(2012,8,12),27],
+['H','Blumenthal, Sidney','H: MORE MAGARIAF PRIVAT REAX (SENT NOW AS MEMO. SI...', "<a href='/C05739587/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Sullivan, Jacob J','MORE ON LIBYA', "<a href='/C05739588/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Sullivan, Jacob J','QUICK SUMMARY OF POTUS CALLS TO PRESIDENTS OF LIBY...', "<a href='/C05739592/'>Link</a>" ,new Date(2012,8,13),9],
+['Russorv@state.gov','H','QUICK SUMMARY OF POTUS CALLS TO PRESIDENTS OF LIBY...', "<a href='/C05739595/'>Link</a>" ,new Date(2012,8,13),9],
+['Mills, Cheryl D','Mills, Cheryl D','AMERICAN KILLED IN LIBYA WAS ON INTEL MISSION TO T...', "<a href='/C05739597/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Mills, Cheryl D','WASH POST: HILLARY CLINTON TRIES TO CALM ANTI-U.S....', "<a href='/C05739593/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Mills, Cheryl D','AMB STEVENS ', "<a href='/C05739589/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Sullivan, Jacob J','CONDOLENCES FROM PM NETANYAHU', "<a href='/C05739596/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Strider, Burns','CNN BELIEF BLOG. PROTHERO', "<a href='/C05739590/'>Link</a>" ,new Date(2012,8,13),9],
+['H','Blumenthal, Sidney','H: MORSI`S PRIVATE CONVERSATIONS TODAY. SID', "<a href='/C05739624/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Mills, Cheryl D','REMARKS', "<a href='/C05739634/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Mills, Cheryl D','YOU DO GREAT WORK - THANKS FOR MAKING OUR HEROS HA...', "<a href='/C05739607/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Russo, Robert V','MINI FOR TODAY - FRIDAY, SEPTEMBER 14, 2012', "<a href='/C05739600/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Burns, William J','THANKS', "<a href='/C05739626/'>Link</a>" ,new Date(2012,8,14),13],
+['Mills, Cheryl D','Marshall, Capricia P','YOU DO GREAT WORK - THANKS FOR MAKING OUR HEROS HA...', "<a href='/C05739619/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Mills, Cheryl D','THANKS', "<a href='/C05739628/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Mills, Cheryl D','SITUATION REPORT NO. 1 09/14/I', "<a href='/C05739605/'>Link</a>" ,new Date(2012,8,14),13],
+['Mills, Cheryl D','Marshall, Capricia P','YOU DO GREAT WORK - THANKS FOR MAKING OUR HEROS HA...', "<a href='/C05739609/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Mills, Cheryl D','FW:', "<a href='/C05739631/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Abedin, Huma','SITUATION REPORT NO. 1 09/14/I', "<a href='/C05739606/'>Link</a>" ,new Date(2012,8,14),13],
+['Russorv@state.gov','H','CNN BELIEF BLOG. PROTHERO', "<a href='/C05739640/'>Link</a>" ,new Date(2012,8,14),13],
+['H','Mills, Cheryl D','PRETTY POWERFUL PIECE ON STANDING UP FOR DIPLOMATS', "<a href='/C05739612/'>Link</a>" ,new Date(2012,8,14),13],
+['hanleymr@state.gov','H','QUESTION AND UPDATE', "<a href='/C05739664/'>Link</a>" ,new Date(2012,8,15),13],
+['abedinh@state.gov','H','SAUDI GRAND MUFTI CALLS ATTACKS ON FOREIGN EMBASSI...', "<a href='/C05739652/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Hanley, Monica R','QUESTION AND UPDATE', "<a href='/C05739662/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Mills, Cheryl D','US INTELLIGENCE WARNED EMBASSY IN EGYPT OF CONCERN...', "<a href='/C05739658/'>Link</a>" ,new Date(2012,8,15),13],
+['hanleymr@state.gov','H','PDB', "<a href='/C05739667/'>Link</a>" ,new Date(2012,8,15),13],
+['hanleymr@state.gov','H','HOLDER', "<a href='/C05739688/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Mills, Cheryl D','ITEM', "<a href='/C05739648/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Hanley, Monica R','HOLDER', "<a href='/C05739675/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Hanley, Monica R','PDB', "<a href='/C05739645/'>Link</a>" ,new Date(2012,8,15),13],
+['hanleymr@state.gov','H','HOLDER', "<a href='/C05739680/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Hanley, Monica R','HOLDER', "<a href='/C05739686/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Hanley, Monica R','PDB', "<a href='/C05739673/'>Link</a>" ,new Date(2012,8,15),13],
+['H','','CONDOLENCES', "<a href='/C05739655/'>Link</a>" ,new Date(2012,8,15),13],
+['H','Sullivan, Jacob J','RICE ON "THIS WEEK"', "<a href='/C05739704/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Hanley, Monica R','KING OF MOROCCO', "<a href='/C05739692/'>Link</a>" ,new Date(2012,8,16),14],
+['sullivanjj@state.gov','H','`MEET THE PRESS` TRANSCRIPT: U.S. AMBASSADOR TO TH...', "<a href='/C05739722/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Mills, Cheryl D','VISAS OBTAINED', "<a href='/C05739706/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Mills, Cheryl D','MEANT TO EMAIL EARLIER', "<a href='/C05739730/'>Link</a>" ,new Date(2012,8,16),14],
+['hanleymr@state.gov','H','HOLDER', "<a href='/C05739689/'>Link</a>" ,new Date(2012,8,16),14],
+['hanleymr@state.gov','H','KING OF MOROCCO', "<a href='/C05739695/'>Link</a>" ,new Date(2012,8,16),14],
+['millscd@state.gov','H','VISAS OBTAINED', "<a href='/C05739708/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Sullivan, Jacob J','`MEET THE PRESS` TRANSCRIPT: U.S. AMBASSADOR TO TH...', "<a href='/C05739728/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Sullivan, Jacob J','`STATE OF THE UNION` TRANSCRIPT: U.S. AMBASSADOR T...', "<a href='/C05739717/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Hanley, Monica R','KING OF MOROCCO', "<a href='/C05739698/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Sullivan, Jacob J','`MEET THE PRESS` TRANSCRIPT: U.S. AMBASSADOR TO TH...', "<a href='/C05739716/'>Link</a>" ,new Date(2012,8,16),14],
+['hanleymr@state.gov','H','KING OF MOROCCO', "<a href='/C05739693/'>Link</a>" ,new Date(2012,8,16),14],
+['hanleymr@state.gov','H','KING OF MOROCCO', "<a href='/C05739701/'>Link</a>" ,new Date(2012,8,16),14],
+['H','Mills, Cheryl D','THANKS', "<a href='/C05739731/'>Link</a>" ,new Date(2012,8,17),3],
+['H','Mills, Cheryl D','VIDEO SHOWS LIBYANS HELPING RESCUE US AMBASSADOR A...', "<a href='/C05739735/'>Link</a>" ,new Date(2012,8,17),3],
+['H','Sullivan, Jacob J','LES GELB ON THE OBAMA RESPONSE', "<a href='/C05739737/'>Link</a>" ,new Date(2012,8,17),3],
+['H','Verveer, Melanne S','NATO', "<a href='/C05739739/'>Link</a>" ,new Date(2012,8,18),1],
+['','H','ANDREW SULLIVAN WITH THE HILLARY LOVE', "<a href='/C05739747/'>Link</a>" ,new Date(2012,8,19),1],
+['H','Coleman, Claire L','MINI FOR TODAY-THURSDAY, SEPT 20, 2012', "<a href='/C05739753/'>Link</a>" ,new Date(2012,8,20),2],
+['H','Mills, Cheryl D','WSJ - MISCUES BEFORE LIBYA ASSAULT', "<a href='/C05739756/'>Link</a>" ,new Date(2012,8,20),2],
+['H','Sullivan, Jacob J','ANYTHING TO REPORT?', "<a href='/C05739760/'>Link</a>" ,new Date(2012,8,21),3],
+['H','Mills, Cheryl D','PROTESTERS STORM MAIN ISLAMIST MILITIA HQ IN LIBYA...', "<a href='/C05739764/'>Link</a>" ,new Date(2012,8,21),3],
+['H','Mills, Cheryl D','LIBYANS MARCH AGAINST ISLAMIST MILITIAS IN BENGHAZ...', "<a href='/C05739757/'>Link</a>" ,new Date(2012,8,21),3],
+['H','Sullivan, Jacob J','CGI DRAFT V3 092212.DOCX', "<a href='/C05739767/'>Link</a>" ,new Date(2012,8,22),3],
+['Flores, Oscar','H','CGI DRAFT V3 092212.DOCX', "<a href='/C05739775/'>Link</a>" ,new Date(2012,8,22),3],
+['H','PIR','LIBYA', "<a href='/C05739766/'>Link</a>" ,new Date(2012,8,22),3],
+['hanleymr@state.gov','H','REMARKS', "<a href='/C05739793/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','H: MORSI`S PRIVATE CONVERSATIONS TODAY. SID', "<a href='/C05739785/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','THANKS', "<a href='/C05739791/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','NOT A DRY EYE IN NEA', "<a href='/C05739778/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','S TODAY', "<a href='/C05739781/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','THANKS', "<a href='/C05739790/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','LIBYANS MARCH AGAINST ISLAMIST MILITIAS IN BENGHAZ...', "<a href='/C05739798/'>Link</a>" ,new Date(2012,8,23),8],
+['hanleymr@state.gov','H','FW:', "<a href='/C05739788/'>Link</a>" ,new Date(2012,8,23),8],
+['H','Sullivan, Jacob J','FELTMAN TIDBITS', "<a href='/C05739815/'>Link</a>" ,new Date(2012,8,24),3],
+['Sullivan, Jacob J','Hanley, Monica R','EDITS', "<a href='/C05739801/'>Link</a>" ,new Date(2012,8,24),3],
+['H','Sullivan, Jacob J','BENHAZI/PROTEST STATEMENTS', "<a href='/C05739812/'>Link</a>" ,new Date(2012,8,24),3],
+['H','Mills, Cheryl D','OUR EXCHANGE', "<a href='/C05739816/'>Link</a>" ,new Date(2012,8,25),1],
+['H','Sullivan, Jacob J','NYT: CLINTON CITES CLEAR LINK BETWE', "<a href='/C05739818/'>Link</a>" ,new Date(2012,8,26),1],
+['H','Sullivan, Jacob J','FW:', "<a href='/C05739821/'>Link</a>" ,new Date(2012,8,27),3],
+['H','Mills, Cheryl D','ISAKSON/CORKER LETTER', "<a href='/C05739826/'>Link</a>" ,new Date(2012,8,27),3],
+['H','Mills, Cheryl D','GOOGLE AND YOUTUBE', "<a href='/C05739829/'>Link</a>" ,new Date(2012,8,27),3],
+['H','Mills, Cheryl D','DNI STATEMENT', "<a href='/C05739832/'>Link</a>" ,new Date(2012,8,28),2],
+['H','Mills, Cheryl D','ARB PANEL', "<a href='/C05739831/'>Link</a>" ,new Date(2012,8,28),2],
+['Flores, Oscar','H','BENHAZI/PROTEST STATEMENTS', "<a href='/C05739610/'>Link</a>" ,new Date(2012,8,30),2],
+['Flores, Oscar','H','BILL KELLER PIECE', "<a href='/C05739833/'>Link</a>" ,new Date(2012,8,30),2],
+['H','Sullivan, Jacob J','H: ROMNEY`S LAST GAMBIT. GOT DONE AND PUBLISHED. S...', "<a href='/C05739620/'>Link</a>" ,new Date(2012,9,01),6],
+['sullivanjj@state.gov','H','H: ROMNEY`S LAST GAMBIT. GOT DONE AND PUBLISHED. S...', "<a href='/C05739627/'>Link</a>" ,new Date(2012,9,01),6],
+['sullivanjj@state.gov','H','H: ROMNEY`S LAST GAMBIT. GOT DONE AND PUBLISHED. S...', "<a href='/C05739618/'>Link</a>" ,new Date(2012,9,01),6],
+['H','Blumenthal, Sidney','H: ROMNEY`S LAST GAMBIT. GOT DONE AND PUBLISHED. S...', "<a href='/C05739623/'>Link</a>" ,new Date(2012,9,01),6],
+['H','Sullivan, Jacob J','H: ROMNEY`S LAST GAMBIT. GOT DONE AND PUBLISHED. S...', "<a href='/C05739629/'>Link</a>" ,new Date(2012,9,01),6],
+['H','Blumenthal, Sidney','H: ROMNEY`S LAST GAMBIT. GOT DONE AND PUBLISHED. S...', "<a href='/C05739615/'>Link</a>" ,new Date(2012,9,01),6],
+['Russorv@state.gov','H','BENGHAZI WAS OBAMA`S 3 AM CALL', "<a href='/C05739633/'>Link</a>" ,new Date(2012,9,03),2],
+['H','Sullivan, Jacob J','TRIPOLI TRIP', "<a href='/C05739635/'>Link</a>" ,new Date(2012,9,03),2],
+['H','Blumenthal, Sidney','H: GREAT TO SEE YOU.  DROP IN AGAIN.  HERE`S LIBYA...', "<a href='/C05739643/'>Link</a>" ,new Date(2012,9,06),2],
+['H','Mills, Cheryl D','DAILY BEAST: A DIPLOMAT UNDER FIRE.', "<a href='/C05739637/'>Link</a>" ,new Date(2012,9,06),2],
+['H','Sullivan, Jacob J','H: GREAT TO SEE YOU.  DROP IN AGAIN.  HERE`S LIBYA...', "<a href='/C05739651/'>Link</a>" ,new Date(2012,9,07),4],
+['Russorv@state.gov','H','H: GREAT TO SEE YOU. DROP IN AGAIN. HERE`S LIBYA. ...', "<a href='/C05739644/'>Link</a>" ,new Date(2012,9,07),4],
+['H','Blumenthal, Sidney','H: GREAT TO SEE YOU.  DROP IN AGAIN.  HERE`S LIBYA...', "<a href='/C05739650/'>Link</a>" ,new Date(2012,9,07),4],
+['sullivanjj@state.gov','H','H: GREAT TO SEE YOU. DROP IN AGAIN. HERE`S LIBYA. ...', "<a href='/C05739647/'>Link</a>" ,new Date(2012,9,07),4],
+['millscd@state.gov','H','THE CABLE: ROMNEY TO COMPARE BENGHAZI TO ORIGINAL ...', "<a href='/C05739656/'>Link</a>" ,new Date(2012,9,08),2],
+['H','Mills, Cheryl D','THE CABLE: ROMNEY TO COMPARE BENGHAZI TO ORIGINAL ...', "<a href='/C05739653/'>Link</a>" ,new Date(2012,9,08),2],
+['H','Schwerin, Daniel B','SPEECH DRAFT FOR FRIDAY AT CSIS', "<a href='/C05739661/'>Link</a>" ,new Date(2012,9,10),5],
+['H','Sullivan, Jacob J','SPEECH DRAFT FOR FRIDAY AT CSIS', "<a href='/C05739663/'>Link</a>" ,new Date(2012,9,10),5],
+['H','Mills, Cheryl D','THE HILL: ISSA TARGETS HILLARY: BIG MISTAKE', "<a href='/C05739659/'>Link</a>" ,new Date(2012,9,10),5],
+['H','Sullivan, Jacob J','SPEECH DRAFT FOR FRIDAY AT CSIS', "<a href='/C05739668/'>Link</a>" ,new Date(2012,9,10),5],
+['Schwerin, Daniel B','Hanley, Monica R','SPEECH DRAFT FOR FRIDAY AT CSIS', "<a href='/C05739665/'>Link</a>" ,new Date(2012,9,10),5],
+['','','SECRETARY OF STATE HILLARY RODHAM CLINTON REMARKS ...', "<a href='/C05739694/'>Link</a>" ,new Date(2012,9,11),2],
+['Nides, Thomas R','Reines, Philippe I','MONICA LANGLEY TRANSCRIPT', "<a href='/C05739674/'>Link</a>" ,new Date(2012,9,11),2],
+['H','Schwerin, Daniel B','ENDING OF SPEECH', "<a href='/C05739685/'>Link</a>" ,new Date(2012,9,12),6],
+['H','Sullivan, Jacob J','HRC @ CSIS - V8', "<a href='/C05739683/'>Link</a>" ,new Date(2012,9,12),6],
+['H','Sullivan, Jacob J','Q RE HBJ', "<a href='/C05739697/'>Link</a>" ,new Date(2012,9,12),6],
+['Sullivan, Jacob J','Schwerin, Daniel B','ENDING OF SPEECH', "<a href='/C05739679/'>Link</a>" ,new Date(2012,9,12),6],
+['H','Sullivan, Jacob J','ENDING OF SPEECH', "<a href='/C05739677/'>Link</a>" ,new Date(2012,9,12),6],
+['sullivanjj@state.gov','H','ENDING OF SPEECH', "<a href='/C05739682/'>Link</a>" ,new Date(2012,9,12),6],
+['H','Sherman, Wendy R','CSIS', "<a href='/C05739700/'>Link</a>" ,new Date(2012,9,13),1],
+['millscd@state.gov','H','BLOOMBERG: LIBYAN AMBASSADOR`S DEATH NOT A POLITIC...', "<a href='/C05739711/'>Link</a>" ,new Date(2012,9,14),4],
+['H','Mills, Cheryl D','BLOOMBERG: LIBYAN AMBASSADOR`S DEATH NOT A POLITIC...', "<a href='/C05739703/'>Link</a>" ,new Date(2012,9,14),4],
+['H','Mills, Cheryl D','BLOOMBERG: LIBYAN AMBASSADOR`S DEATH NOT A POLITIC...', "<a href='/C05739714/'>Link</a>" ,new Date(2012,9,14),4],
+['millscd@state.gov','H','BLOOMBERG: LIBYAN AMBASSADOR`S DEATH NOT A POLITIC...', "<a href='/C05739718/'>Link</a>" ,new Date(2012,9,14),4],
+['hanleymr@state.gov','H','[SALON] THE DEATH OF AMBASSADOR CHRIS STEVENS, THE...', "<a href='/C05739729/'>Link</a>" ,new Date(2012,9,15),3],
+['H','Mills, Cheryl D','TRIPOLI PERSONNEL', "<a href='/C05739720/'>Link</a>" ,new Date(2012,9,15),3],
+['sullivanjj@state.gov','H','[SALON] THE DEATH OF AMBASSADOR CHRIS STEVENS, THE...', "<a href='/C05739733/'>Link</a>" ,new Date(2012,9,15),3],
+['H','Blumenthal, Sidney','H: NEW INTEL, LIBYAN PM`S PLANS. SID', "<a href='/C05739734/'>Link</a>" ,new Date(2012,9,16),1],
+['','H','FW:', "<a href='/C05739740/'>Link</a>" ,new Date(2012,9,17),5],
+['','H','FW:', "<a href='/C05739741/'>Link</a>" ,new Date(2012,9,17),5],
+['sullivanjj@state.gov','H','H: NEW INTEL, LIBYAN PM`S PLANS. SID', "<a href='/C05739744/'>Link</a>" ,new Date(2012,9,17),5],
+['Russorv@state.gov','H','[SALON] THE DEATH OF AMBASSADOR CHRIS STEVENS, THE...', "<a href='/C05739750/'>Link</a>" ,new Date(2012,9,17),5],
+['Russorv@state.gov','H','RICE ON "THIS WEEK"', "<a href='/C05739754/'>Link</a>" ,new Date(2012,9,17),5],
+['H','Mills, Cheryl D','UPDATE: LIBYAN ISLAMIST SAYS HE WAS AT U.S. CONSUL...', "<a href='/C05739762/'>Link</a>" ,new Date(2012,9,18),2],
+['H','Mills, Cheryl D','FW: ', "<a href='/C05739758/'>Link</a>" ,new Date(2012,9,18),2],
+['H','Mills, Cheryl D','LIBYA', "<a href='/C05739765/'>Link</a>" ,new Date(2012,9,19),2],
+['millscd@state.gov','H','LIBYA', "<a href='/C05739763/'>Link</a>" ,new Date(2012,9,19),2],
+['H','Sullivan, Jacob J','H: LATEST INTEL: LIBYAN LEADERSHIP PRIVATE DISCUSS...', "<a href='/C05739772/'>Link</a>" ,new Date(2012,9,25),4],
+['H','Blumenthal, Sidney','H: LATEST INTEL: LIBYAN LEADERSHIP PRIVATE DISCUSS...', "<a href='/C05739768/'>Link</a>" ,new Date(2012,9,25),4],
+['Russorv@state.gov','H','H: LATEST INTEL: LIBYAN LEADERSHIP PRIVATE DISCUSS...', "<a href='/C05739769/'>Link</a>" ,new Date(2012,9,25),4],
+['sullivanjj@state.gov','H','H: LATEST INTEL: LIBYAN LEADERSHIP PRIVATE DISCUSS...', "<a href='/C05739771/'>Link</a>" ,new Date(2012,9,25),4],
+['H','Mills, Cheryl D','WSJ EDITORIAL - THE OTHER EMBASSY ATTACK', "<a href='/C05739774/'>Link</a>" ,new Date(2012,9,27),1],
+['H','Huma, Abedin','', "<a href='/C05739777/'>Link</a>" ,new Date(2012,9,29),1],
+['H','Mills, Cheryl D','DIPLOMATS STILL IN BENGHAZI SAY THEY HAD LONG QUES...', "<a href='/C05739779/'>Link</a>" ,new Date(2012,10,11),1],
+['H','Mills, Cheryl D','HOW ARE THE HEARINGS GOING?', "<a href='/C05739780/'>Link</a>" ,new Date(2012,10,13),1],
+['H','Mills, Cheryl D','DAVID PETRAEUS WILL TESTIFY ON BENGHAZI (POLITICO', "<a href='/C05739787/'>Link</a>" ,new Date(2012,10,14),5],
+['H','Mills, Cheryl D','POLITICO BREAKING NEWS', "<a href='/C05739795/'>Link</a>" ,new Date(2012,10,14),5],
+['Mills, Cheryl D','Reines, Philippe I','DAVID PETRAEUS WILL TESTIFY ON BENGHAZI (POLITICO', "<a href='/C05739792/'>Link</a>" ,new Date(2012,10,14),5],
+['millscd@state.gov','H','POLITICO BREAKING NEWS', "<a href='/C05739797/'>Link</a>" ,new Date(2012,10,14),5],
+['Sullivan, Jacob J','Mills, Cheryl D','HOMELANDSECURITY, INTELLIGENCE: DEAR COLLEAGUE: CO...', "<a href='/C05739786/'>Link</a>" ,new Date(2012,10,14),5],
+['H','Mills, Cheryl D','MARK - QUICK REUTERS QUERY', "<a href='/C05739799/'>Link</a>" ,new Date(2012,10,15),2],
+['H','Slaughter, Anne-Marie','AN OP-ED YOU SHOULD READ; PRAISES STATE FOR WHAT S...', "<a href='/C05739802/'>Link</a>" ,new Date(2012,10,15),2],
+['H','Mills, Cheryl D','WSJ: HILLARY AND LIBYA', "<a href='/C05739804/'>Link</a>" ,new Date(2012,10,16),1],
+['H','Sullivan, Jacob J','FYI - REPORT OF ARRESTS -- POSSIBLE BENGHAZI CONNE...', "<a href='/C05739808/'>Link</a>" ,new Date(2012,10,18),2],
+['','H','WSJ: HILLARY AND LIBYA', "<a href='/C05739805/'>Link</a>" ,new Date(2012,10,18),2],
+['H','Mills, Cheryl D','AP - RICE DEFENDS BENGHAZI REMARKS', "<a href='/C05739811/'>Link</a>" ,new Date(2012,10,22),1],
+['H','Mills, Cheryl D','MONDAY NOVEMBER 26 FROM 2:35 - 3:20 PM - TOPIC - B...', "<a href='/C05739819/'>Link</a>" ,new Date(2012,10,23),5],
+['millscd@state.gov','H','MONDAY NOVEMBER 26 FROM 2:35 - 3:20 PM - TOPIC - B...', "<a href='/C05739823/'>Link</a>" ,new Date(2012,10,23),5],
+['H','Valmoro, Lona J','MONDAY NOVEMBER 26 FROM 2:35 - 3:20 PM - TOPIC - B...', "<a href='/C05739825/'>Link</a>" ,new Date(2012,10,23),5],
+['H','Mills, Cheryl D','MONDAY NOVEMBER 26 FROM 2:35 - 3:20 PM - TOPIC - B...', "<a href='/C05739814/'>Link</a>" ,new Date(2012,10,23),5],
+['millscd@state.gov','H','MONDAY NOVEMBER 26 FROM 2:35 - 3:20 PM - TOPIC - B...', "<a href='/C05739817/'>Link</a>" ,new Date(2012,10,23),5],
+['H','Mills, Cheryl D','MONDAY NOVEMBER 26 FROM 2:35 - 3:20 PM - TOPIC - B...', "<a href='/C05739827/'>Link</a>" ,new Date(2012,10,24),1],
+['H','Valmoro, Lona J','SCHEDULE', "<a href='/C05739830/'>Link</a>" ,new Date(2012,10,25),2],
+['ValmoroLj@state.gov','H','SCHEDULE', "<a href='/C05739834/'>Link</a>" ,new Date(2012,10,25),2],
+['H','Mills, Cheryl D','HEARINGS', "<a href='/C05739836/'>Link</a>" ,new Date(2012,10,26),2],
+['H','Coleman, Claire L','MINI FOR TODAY-MONDAY, NOV 26, 2012', "<a href='/C05739835/'>Link</a>" ,new Date(2012,10,26),2],
+['H','Mills, Cheryl D','MAKE UP TURNED BREAK UP', "<a href='/C05739840/'>Link</a>" ,new Date(2012,10,28),2],
+['H','Mills, Cheryl','POLITICO - MCCAIN AND HILLARY`S BIPARTISAN BOND', "<a href='/C05739839/'>Link</a>" ,new Date(2012,10,28),2],
+['H','Mills, Cheryl','COHEN POST', "<a href='/C05739841/'>Link</a>" ,new Date(2012,11,04),1],
+['H','Blumenthal, Sidney','H: LIBYA, LATEST BENGHAZI INTEL. SID', "<a href='/C05739843/'>Link</a>" ,new Date(2012,11,10),1],
+['H','Mills, Cheryl D','INQUIRY INTO LIBYA ATTACK IS SHARPLY CRITICAL OF S...', "<a href='/C05739846/'>Link</a>" ,new Date(2012,11,18),2],
+['H','Mills, Cheryl D','DS', "<a href='/C05739844/'>Link</a>" ,new Date(2012,11,18),2],
+['H','Blumenthal, Sidney','H: SURE YOU`VE SEEN ALL THIS INFO, BUT START ON GR...', "<a href='/C05739848/'>Link</a>" ,new Date(2012,11,19),1],
+['sullivanjj@state.gov','H','H:  LIBYA, LATEST BENGHAZI INTEL.  SID', "<a href='/C05739865/'>Link</a>" ,new Date(2012,11,20),11],
+['millscd@state.gov','H','FOX FROM CAITLIN', "<a href='/C05739856/'>Link</a>" ,new Date(2012,11,20),11],
+['H','Mills, Cheryl D','FOX FROM CAITLIN', "<a href='/C05739855/'>Link</a>" ,new Date(2012,11,20),11],
+['H','Mills, Cheryl D','THANK YOU SO MUCH', "<a href='/C05739850/'>Link</a>" ,new Date(2012,11,20),11],
+['millscd@state.gov','H','FOX FROM CAITLIN', "<a href='/C05739858/'>Link</a>" ,new Date(2012,11,20),11],
+['sullivanjj@state.gov','H','H: SURE YOU`VE SEEN ALL THIS INFO, BUT START ON GR...', "<a href='/C05739860/'>Link</a>" ,new Date(2012,11,20),11],
+['H','Nides, Thomas R','THANK YOU SO MUCH', "<a href='/C05739852/'>Link</a>" ,new Date(2012,11,20),11],
+['H','Burns, William J','THANK YOU SO MUCH', "<a href='/C05739851/'>Link</a>" ,new Date(2012,11,20),11],
+['H','Sullivan, Jacob J','H: SURE YOU`VE SEEN ALL THIS INFO, BUT START ON GR...', "<a href='/C05739862/'>Link</a>" ,new Date(2012,11,20),11],
+['NidesTR@state.gov','H','THANK YOU SO MUCH', "<a href='/C05739853/'>Link</a>" ,new Date(2012,11,20),11],
+['Burnswj@state.gov','H','THANK YOU SO MUCH', "<a href='/C05739849/'>Link</a>" ,new Date(2012,11,20),11],
+['H','Reines, Philippe I','THANK YOU', "<a href='/C05739867/'>Link</a>" ,new Date(2012,11,24),1],]);
+        // Create a dashboard.
+        var dashboard = new google.visualization.Dashboard(
+            document.getElementById('dashboard_div'));
+
+        // Create a range slider, passing some options
+        var donutRangeSlider = new google.visualization.ControlWrapper({
+          'controlType': 'DateRangeFilter',
+          'containerId': 'filter_div',
+          'options': {
+            'filterColumnLabel': 'docDate'
+          }
+        });
+
+      var fromFilter = new google.visualization.ControlWrapper({
+        'controlType': 'StringFilter',
+        'containerId': 'from_filter_div',
+        'options': {
+            'filterColumnLabel': 'from'
+        }
+       });
+
+      var toFilter = new google.visualization.ControlWrapper({
+        'controlType': 'StringFilter',
+        'containerId': 'to_filter_div',
+        'options': {
+            'filterColumnLabel': 'to'
+        }
+       });
+
+        // Create a pie chart, passing some options
+        var pieChart = new google.visualization.ChartWrapper({
+          'chartType': 'LineChart',
+          'containerId': 'chart_div',
+          // 'options': {
+          //   'width': 600,
+          //   'height': 300,
+          //   'legend': 'right'
+          // },
+          'view': {'columns': [4, 5]}
+        });
+        // ['to','from','subject','docDate','vol']
+
+                // Create a pie chart, passing some options
+        var tableChart = new google.visualization.ChartWrapper({
+          'chartType': 'Table',
+          'containerId': 'table_chart_div',
+          'options': {
+            'allowHtml': true
+          },
+           'view': {'columns': [0, 1, 2, 3, 4]}
+        });
+
+            // Create a pie chart, passing some options
+        var timelineChart = new google.visualization.ChartWrapper({
+          'chartType': 'Calendar',
+          'containerId': 'timeline_div',
+          'options': {
+            // 'width': 300,
+            // 'height': 300,
+            'legend': 'right',
+          },
+          'view': {'columns': [4, 5]}
+        });
+
+        // Establish dependencies, declaring that 'filter' drives 'pieChart',
+        // so that the pie chart will only display entries that are let through
+        // given the chosen slider range.
+        dashboard.bind([donutRangeSlider, fromFilter, toFilter], pieChart);
+        dashboard.bind([donutRangeSlider, fromFilter, toFilter], timelineChart);
+        dashboard.bind([donutRangeSlider, fromFilter, toFilter], tableChart);
+
+        // Draw the dashboard.
+        dashboard.draw(data);
+      }
+    </script>
+  </head>
+
+  <body>
+    <!--Div that will hold the dashboard-->
+    <div id="dashboard_div">
+      <!--Divs that will hold each control and chart-->
+      
+      <div> 
+       <h1 id="title">The Hillary Clinton Benghazi Emails</h1> 
+       <p id="body">The purpose of this webpage is to create a more user-friendly way of exploring the corpus of documents released by Hilary Clinton to the State Department.  Currently, the easiest way to explore these emails is via navigating corpus of pdfs with limited search, sort, or visualization functionality. We not only improve the search and sort capabilities here, but also present some visualizations to give a sense of the dynamics of Hilary's emailing behavior over the period reported in the form of calendar and wordcloud plots. Further, there is a seperate page for each email (links in the table at the bottom)</p>
+      </div>
+      <table>
+        <tr>
+          <td>
+            <h2 id="section" style="padding-left:320px">Number of emails per day</h2>
+            <div id="timeline_div" style="height: 350px; width: 950px; padding-left:15px"></div>
+          </td>
+          <td>
+              <h2 id="section" style="padding-left:15px; position: relative; top: 20px;">All Emails Wordcloud</h2>
+              <img src="{{ url_for('static', filename = 'all_word_cloud.jpg') }}"  width="350" height="350">
+          </td>
+        </tr>
+      </table>
+
+      <h3 id="section" style="padding-left:450px"> Volume of emails over time</h3>
+      <div id="chart_div" style="width: 100%"></div>
+      <h2 id="section" style="padding-left:100px">Filters</h2>
+      <p id="body"> You can use the "from" field to filter the sender of emails in the corpus, the "to" field to filter recipients, and "docDate" to filter the date of the email.</p>
+      <div id="filter_div"  style="float:left"  class="filters"></div>
+      <div id="from_filter_div" style="float:left" class="filters"></div>
+      <div id="to_filter_div" class="filters"></div>
+      <h2 id="section" style="padding-left:100px"> Email meta-data and links to email pages</h2>
+      <div class="table" id="table_chart_div" style="padding-top:50px"></div>
+
+  </body>
+</html>

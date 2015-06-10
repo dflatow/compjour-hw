@@ -1,0 +1,30 @@
+#title{
+	font-family: Ariel;
+	font-size: 60px;
+	padding-left: 10px;
+	font-weight: bold;
+}
+
+#body{
+	font-family: Ariel;
+	font-size: 22px;
+	padding-left: 40px;
+	padding-right: 40px;
+}
+
+#section{
+	font-family: Ariel;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.filters{
+	padding-left: 30px;
+	padding-bottom: 30px;
+}
+
+.table{
+	padding-left: 10%;
+	width: 90%;
+	height: 1000px;
+}
